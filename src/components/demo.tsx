@@ -11,12 +11,12 @@ import { GlassCard } from "./ui/glass-card";
 import { GlassButton } from "./ui/glass-button";
 import { GlassDock, GlassDockItem } from "./ui/glass-dock";
 
-const FADE_UP = {
+const FADE_UP: any = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const STAGGER = {
+const STAGGER: any = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
 };
