@@ -37,9 +37,8 @@ export default function Demo() {
 
     setFormState({ loading: true, success: false, error: false });
 
-    // Replace this URL with your Google Apps Script Web App URL
-    // Documentation: https://github.com/jamiewilson/form-to-google-sheets
-    const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx32y-pp28DNjBDVy6t9HrBVYLzyMgB6EWSl4YY2cXNANGShotXCx4fAGXB3rbcwrt9/exec";
+    // Using a secure environment variable for the Webhook URL
+    const GOOGLE_SHEET_WEBHOOK_URL = import.meta.env.VITE_GOOGLE_SHEET_URL;
 
     if (!GOOGLE_SHEET_WEBHOOK_URL) {
       // For demonstration purposes, we'll simulate a success after 1.5 seconds if URL is empty
